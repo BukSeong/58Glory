@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题1解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS3.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题1：时间膨胀</h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：一艘宇宙飞船以 $v = 0.8c$ 的速度飞行。地球上的观察者测得飞船飞行了 $t = 10\ \text{年}$ 。求：</p>
+        <ol>
+            <li>飞船上的宇航员经历的时间 $\tau$ </li>
+            <li>如果宇航员在飞行中度过了 $5\ \text{年}$，地球上的观察者会认为飞船飞行了多久？</li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+\textcolor{#11cc98}{\text{时间膨胀公式}} &\quad \Delta t = \gamma \Delta \tau \quad \text{其中} \quad \gamma = \frac{1}{\sqrt{1 - v^2/c^2}} \\
+\textcolor{#11cc98}{\text{1.}} \quad \gamma &= \frac{1}{\sqrt{1 - (0.8)^2}} = \frac{1}{0.6} \approx 1.6667 \\
+\Delta \tau &= \frac{\Delta t}{\gamma} = \frac{10}{1.6667} \approx 6\ \text{年} \\
+\textcolor{#11cc98}{\text{2.}} \quad \Delta t &= \gamma \Delta \tau = 1.6667 \times 5 \approx 8.33\ \text{年}
+\end{aligned}
+    </div>
+</body>
+</html>

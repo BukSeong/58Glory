@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题2解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS1.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题2：滚动竞赛</h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：质量 $m$ 、半径 $r$ 的实心球与薄壁圆筒从同一斜面滚下（无滑），求：</p>
+        <ol>
+            <li>人两者加速度之比 </li>
+            <li>到达底部时角速度之比</li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+\textcolor{#11cc98}{\text{纯滚动条件}} &\quad a = \frac{g\sin\theta}{1 + I/(mr^2)} \\
+\textcolor{#11cc98}{\text{实心球}} &\quad a_{\text{球}} = \frac{5}{7}g\sin\theta, \quad I_{\text{球}} = \frac{2}{5}mr^2 \\
+\textcolor{#11cc98}{\text{薄壁筒}} &\quad a_{\text{筒}} = \frac{1}{2}g\sin\theta, \quad I_{\text{筒}} = mr^2 \\
+\Rightarrow \frac{a_{\text{球}}}{a_{\text{筒}}} &= \frac{5/7}{1/2} = \frac{10}{7} \\
+\textcolor{#11cc98}{\text{时间关系}} &\quad t_{\text{球}} < t_{\text{筒}} \\
+\textcolor{#11cc98}{\text{角速度比}} &\quad \frac{\omega_{\text{球}}}{\omega_{\text{筒}}} = \frac{v_{\text{球}}/r}{v_{\text{筒}}/r} = \sqrt{\frac{h_{\text{球}}}{h_{\text{筒}}}} \quad (\text{由能量守恒推导})
+\end{aligned}
+    </div>
+</body>
+</html>

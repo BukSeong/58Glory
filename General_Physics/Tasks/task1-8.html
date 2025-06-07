@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题8解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS1.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题8：弹簧振子能量 </h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：质量 $m = 0.5\ \text{kg}$ 的物体系于劲度系数 $k = 200\ \text{N/m}$ 的弹簧，振幅 $A = 0.1\ \text{m}$。求：</p>
+        <ol>
+            <li>最大速率 $v_{\text{max}}$ </li>
+            <li>动能与势能相等时的位置 </li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+v_{\text{max}} &= \omega A = \sqrt{\frac{k}{m}} \cdot A = \sqrt{400} \cdot 0.1 = 2\ \text{m/s} \\
+\textcolor{#11cc98}{\text{能量守恒}} &\quad \frac{1}{2}kx^2 = \frac{1}{2}k(A^2 - x^2) \\
+\Rightarrow x &= \pm \frac{A}{\sqrt{2}} = \pm 0.0707\ \text{m}
+\end{aligned}
+    </div>
+</body>
+</html>

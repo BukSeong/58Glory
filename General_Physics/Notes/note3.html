@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>普通物理学 General Physics - Part 3: 相对论</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid #11cc98;
+            padding-bottom: 0.3em;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            color: #11cc98;
+            border-bottom: 3px solid #11cc98;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        h4 {
+            font-size: 1.3rem;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .toc {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .toc h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .content-section {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .example {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .example-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .formula {
+            background-color: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        
+        .warning {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #11cc98;
+            color: white;
+            border-radius: 6px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0fa67a;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .content-section {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* 新增样式以更好地适应原始内容 */
+        .content-section ul, .content-section ol {
+            background-color: #f8f8f8;
+            padding: 15px 20px 15px 40px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .content-section li {
+            margin-bottom: 12px;
+        }
+        
+        .content-section p {
+            margin: 10px 0;
+            line-height: 1.7;
+        }
+        
+        .content-section table {
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        .content-section h3 {
+            margin-top: 25px;
+        }
+        
+        .content-section h4 {
+            margin-top: 20px;
+        }
+    </style>
+    <!-- 引入MathJax进行公式渲染 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <!-- 目录 -->
+    <h1><a id="相对论"></a>Part 3: 相对论</h1>
+    <div class="nav-buttons">
+        <a href="./graph/graph3.html" class="nav-button">&larr; 查看知识图谱</a>
+        <a href="../Tasks/QS3.html" class="nav-button">查看习题集 &rarr;</a>
+    </div>
+    <div class="toc">
+        <h2>目录</h2>
+        <ul>
+            <li><a href="#相对论">Part 3: 相对论</a></li>
+            <ul>
+                <li><a href="#基本原理">一、基本原理</a></li>
+                <li><a href="#时空变换">二、时空变换</a></li>
+                <li><a href="#相对论效应">三、相对论效应</a></li>
+                <li><a href="#相对论动力学">四、相对论动力学</a></li>
+                <li><a href="#关键实验">五、关键实验</a></li>
+                <li><a href="#重要公式速查表">六、重要公式速查表</a></li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="../index.html" class="nav-button">&larr; 返回首页</a>
+        <a href="#重要公式速查表" class="nav-button">查看重要公式 &rarr;</a>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="基本原理"></a>一、基本原理</h2>
+        <h3>1.1 爱因斯坦公设</h3>
+        <ol>
+            <li>
+                <strong>相对性原理</strong>：物理定律在所有惯性系中形式相同
+            </li>
+            <li>
+                <strong>光速不变原理</strong>： \(c = 3 \times 10^8  \text{m/s}\) （真空中）
+            </li>
+        </ol>
+        <h3>1.2 关键结论</h3>
+        <ul>
+            <li>同时性的相对性</li>
+            <li>速度上限 \(v \leq c\)</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="时空变换"></a>二、时空变换</h2>
+        <h3>2.1 洛伦兹变换</h3>
+        <div class="formula">
+            \[
+            \begin{cases} 
+            x' = \gamma (x - vt) \\ 
+            t' = \gamma \left( t - \dfrac{vx}{c^2} \right) 
+            \end{cases} 
+            \quad \gamma = \dfrac{1}{\sqrt{1 - v^2/c^2}}
+            \]
+        </div>
+        <h3>2.2 速度叠加</h3>
+        <div class="formula">
+            \[ w = \frac{u + v}{1 + \dfrac{uv}{c^2}} \]
+        </div>
+        <h3>2.3 长度与角度</h3>
+        <ul>
+            <li>长度收缩： \(L = L_0 \sqrt{1 - \beta^2 \cos^2\theta_0}\)</li>
+            <li>角度变换： \(\tan \theta = \gamma \tan \theta_0\)</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="相对论效应"></a>三、相对论效应</h2>
+        <h3>3.1 时间膨胀</h3>
+        <div class="formula">
+            \[ \Delta t = \gamma \Delta \tau \]
+        </div>
+        <h3>3.2 双生子佯谬</h3>
+        <p>加速参考系时间流逝更慢</p>
+        <h3>3.3 μ子衰变</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>观测系</th>
+                    <th>现象</th>
+                    <th>公式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>地面系</td>
+                    <td>时间膨胀</td>
+                    <td>\(t_{1/2}^{\text{(earth)}} = \gamma t_{1/2}\)</td>
+                </tr>
+                <tr>
+                    <td>μ子系</td>
+                    <td>长度收缩</td>
+                    <td>\(L' = L_0 / \gamma\)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="相对论动力学"></a>四、相对论动力学</h2>
+        <h3>4.1 动量与能量</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>物理量</th>
+                    <th>公式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>动量</td>
+                    <td>\(\vec{p} = \gamma m_0 \vec{v}\)</td>
+                </tr>
+                <tr>
+                    <td>总能量</td>
+                    <td>\(E = \gamma m_0 c^2\)</td>
+                </tr>
+                <tr>
+                    <td>动能</td>
+                    <td>\(K = (\gamma - 1)m_0 c^2\)</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>4.2 质能等价</h3>
+        <div class="formula">
+            \[ \Delta m = \frac{\Delta E}{c^2} \]
+        </div>
+        <h3>4.3 四维动量</h3>
+        <div class="formula">
+            \[ \mathbf{P} \cdot \mathbf{P} = \left( \frac{E}{c} \right)^2 - p^2 = (m_0 c)^2 \]
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="关键实验"></a>五、关键实验</h2>
+        <h3>5.1 迈克尔逊 - 莫雷</h3>
+        <p>零结果证伪以太模型</p>
+        <h3>5.2 斐索实验</h3>
+        <div class="formula">
+            \[ w = \frac{c}{n} + v \left(1 - \frac{1}{n^2}\right) \]
+        </div>
+        <h3>5.3 康普顿散射</h3>
+        <div class="formula">
+            \[ \dfrac{1}{E_{\rm ph}^f} = \dfrac{1}{E_{\rm ph}} + \dfrac{2}{m_e c^2} \]
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="重要公式速查表"></a>六、重要公式速查表</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>概念</th>
+                    <th>公式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>时间膨胀</td>
+                    <td>\(\Delta t = \gamma \Delta \tau\)</td>
+                </tr>
+                <tr>
+                    <td>长度收缩</td>
+                    <td>\(L = L_0 / \gamma\)</td>
+                </tr>
+                <tr>
+                    <td>速度叠加</td>
+                    <td>\(w = \dfrac{u + v}{1 + uv/c^2}\)</td>
+                </tr>
+                <tr>
+                    <td>多普勒效应</td>
+                    <td>\(f' = f_0 \sqrt{\dfrac{1 \mp \beta}{1 \pm \beta}}\)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <a href="#相对论" class="back-to-top">↑</a>
+    
+    <div class="nav-buttons">
+        <a href="note2.html#振动波动典型例题" class="nav-button">&larr; 返回振动与波动部分</a>
+        <a href="#相对论" class="nav-button">返回顶部 &uarr;</a>
+    </div>
+    
+    <script>
+        // 当页面滚动时显示/隐藏返回顶部按钮
+        window.onscroll = function() {
+            var backButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backButton.style.display = "block";
+            } else {
+                backButton.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>

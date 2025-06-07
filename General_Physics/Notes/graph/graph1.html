@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Part 1 力学知识图谱</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #11cc98;
+            margin: 10px auto 0;
+        }
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            background-color: #11cc98;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(17, 204, 152, 0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .nav-link:hover {
+            background-color: #0eb284;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(17, 204, 152, 0.3);
+        }
+        
+        .nav-link i {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-link:hover i {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../note1.html" class="nav-link"><span>返回Note 1</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>Part 1 力学知识图谱</h1>
+    <!-- 流程图 -->
+    <div class="mermaid">
+        graph LR
+            A[力学] --> B[运动学]
+            A --> C[动力学]
+            A --> D[能量与动量]
+            A --> E[刚体力学]
+    
+            B --> B1[匀加速运动]
+            B1 -->|公式| B1a("v = v₀ + at")
+            B1 -->|公式| B1b("x = x₀ + v₀t + ½at²")
+            B --> B2[圆周运动]
+            B2 -->|概念| B2a("向心加速度 a_c = v²/r = ω²r")
+            B2 -->|公式| B2b("角速度 ω = 2π/T")
+    
+            C --> C1[牛顿定律]
+            C1 -->|核心| C1a("∑F = ma")
+            C --> C2[摩擦力]
+            C2 -->|类型| C2a("静摩擦 f_s ≤ μ_sN")
+            C2 -->|类型| C2b("动摩擦 f_k = μ_kN")
+    
+            D --> D1[动能定理]
+            D1 -->|公式| D1a("W_合 = ΔK = ½mv² - ½mv₀²")
+            D --> D2[动量守恒]
+            D2 -->|条件| D2a("∑p_初 = ∑p_末 (系统孤立)")
+    
+            E --> E1[转动惯量]
+            E1 -->|定义| E1a("I = ∫r²dm")
+            E1 -->|实例| E1b("实心球 I = 2/5mr²")
+            E --> E2[角动量守恒]
+            E2 -->|条件| E2a("∑τ_外 = 0 ⇒ L = Iω = 常数")
+    </div>
+</body>
+
+</html>

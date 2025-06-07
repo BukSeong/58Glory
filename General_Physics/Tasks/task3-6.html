@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题6解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS3.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题6：四维动量</h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：一个粒子的四维动量为 $\mathbf{P} = (E/c, p_x, p_y, p_z)$，其中 $E = 5\ \text{GeV}$，$p_x = 3\ \text{GeV}/c$，$p_y = 2\ \text{GeV}/c$，$p_z = 0$。求： </p>
+        <ol>
+            <li>粒子的静止质量 $m_0$ </li>
+            <li>粒子的速度 $v$ </li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+\textcolor{#11cc98}{\text{四维动量不变量}} &\quad \mathbf{P} \cdot \mathbf{P} = \left( \frac{E}{c} \right)^2 - p^2 = (m_0 c)^2 \\
+p^2 &= p_x^2 + p_y^2 + p_z^2 = (3\ \text{GeV}/c)^2 + (2\ \text{GeV}/c)^2 + 0 = 13\ (\text{GeV}/c)^2 \\
+\textcolor{#11cc98}{\text{1.}} \quad (m_0 c^2)^2 &= E^2 - (pc)^2 = (5\ \text{GeV})^2 - (13\ \text{GeV}^2) = 12\ \text{GeV}^2 \\
+m_0 c^2 &= \sqrt{12}\ \text{GeV} \approx 3.464\ \text{GeV} \\
+m_0 &= \frac{3.464\ \text{GeV}}{c^2} \\
+\textcolor{#11cc98}{\text{相对论能量公式}} &\quad E = \gamma m_0 c^2 \implies \gamma = \frac{E}{m_0 c^2} = \frac{5}{3.464} \approx 1.443 \\
+\textcolor{#11cc98}{\text{2.}} \quad \gamma &= \frac{1}{\sqrt{1 - v^2/c^2}} \implies 1 - v^2/c^2 = \frac{1}{\gamma^2} \approx \frac{1}{2.083} \approx 0.48 \\
+v^2/c^2 &\approx 0.52 \implies v \approx c \sqrt{0.52} \approx 0.72c
+\end{aligned}
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题3解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS1.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题3：复摆周期</h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：一质量 $m$ 、长 $L$ 的均匀细杆绕端点作小角度摆动，证明其周期为： </p>
+        <ol>
+            <li>$T = 2\pi\sqrt{\frac{2L}{3g}}$</li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+\textcolor{#11cc98}{\text{转动惯量}} &\quad I = \frac{1}{3}mL^2 \\
+\textcolor{#11cc98}{\text{回复力矩}} &\quad \tau = -mg\frac{L}{2}\sin\theta \approx -mg\frac{L}{2}\theta \\
+\textcolor{#11cc98}{\text{转动定律}} &\quad I\alpha = \tau \Rightarrow \frac{d^2\theta}{dt^2} + \frac{3g}{2L}\theta = 0 \\
+\textcolor{#11cc98}{\text{周期公式}} &\quad T = 2\pi\sqrt{\frac{I}{mgr\_{\text{CM}}}} = 2\pi\sqrt{\frac{2L}{3g}}
+\end{aligned}
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题4解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS3.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题4：质能等价</h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：一个电子（静止质量 $m_0 = 9.11 \times 10^{-31}\ \text{kg}$）被加速到 $v = 0.99c$ 的速度。求： </p>
+        <ol>
+            <li>电子的总能量 $E$ </li>
+            <li>电子的动能 $K$  </li>
+            <li>电子的动量 $p$ </li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+\textcolor{#11cc98}{\text{相对论能量公式}} &\quad E = \gamma m_0 c^2 \quad \text{其中} \quad \gamma = \frac{1}{\sqrt{1 - v^2/c^2}} \\
+\gamma &= \frac{1}{\sqrt{1 - (0.99)^2}} \approx \frac{1}{0.141} \approx 7.09 \\
+\textcolor{#11cc98}{\text{1.}} \quad E &= \gamma m_0 c^2 = 7.09 \times 9.11 \times 10^{-31} \times (3 \times 10^8)^2 \\
+&\approx 5.81 \times 10^{-13}\ \text{J} \quad \text{或} \quad \approx 3.63\ \text{MeV} \\
+\textcolor{#11cc98}{\text{2.}} \quad K &= (\gamma - 1)m_0 c^2 = (7.09 - 1) \times 9.11 \times 10^{-31} \times (3 \times 10^8)^2 \\
+&\approx 4.98 \times 10^{-13}\ \text{J} \quad \text{或} \quad \approx 3.11\ \text{MeV} \\
+\textcolor{#11cc98}{\text{3.}} \quad p &= \gamma m_0 v = 7.09 \times 9.11 \times 10^{-31} \times 0.99 \times 3 \times 10^8 \\
+&\approx 1.91 \times 10^{-22}\ \text{kg} \cdot \text{m/s}
+\end{aligned}
+    </div>
+</body>
+</html>

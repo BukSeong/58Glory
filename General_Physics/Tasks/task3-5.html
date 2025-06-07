@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题5解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS3.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题5：双生子佯谬</h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：双胞胎中的哥哥乘坐宇宙飞船以 $v = 0.8c$ 的速度前往距离地球 $4\ \text{光年}$ 的星球，到达后立即返回。弟弟留在地球上。求： </p>
+        <ol>
+            <li>地球上的弟弟经历的时间 $\Delta t_{\text{earth}}$ </li>
+            <li>飞船上的哥哥经历的时间 $\Delta t_{\text{ship}}  </li>
+            <li>当哥哥返回地球时，两人的年龄差是多少？ </li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+\textcolor{#11cc98}{\text{单程时间（地球参考系）}} &\quad t_1 = \frac{d}{v} = \frac{4\ \text{光年}}{0.8c} = 5\ \text{年} \\
+\textcolor{#11cc98}{\text{往返时间（地球参考系）}} &\quad \Delta t_{\text{earth}} = 2t_1 = 10\ \text{年} \\
+\textcolor{#11cc98}{\text{时间膨胀因子}} &\quad \gamma = \frac{1}{\sqrt{1 - (0.8)^2}} = \frac{1}{0.6} \approx 1.6667 \\
+\textcolor{#11cc98}{\text{往返时间（飞船参考系）}} &\quad \Delta t_{\text{ship}} = \frac{\Delta t_{\text{earth}}}{\gamma} = \frac{10}{1.6667} \approx 6\ \text{年} \\
+\textcolor{#11cc98}{\text{年龄差}} &\quad \Delta t_{\text{earth}} - \Delta t_{\text{ship}} = 10 - 6 = 4\ \text{年}
+\end{aligned}
+    </div>
+</body>
+</html>

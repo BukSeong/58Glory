@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题9解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS1.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题9：流体静力学</h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：底面积 $S = 0.5\ \text{m}^2$ 的圆柱容器装有高度 $h = 1\ \text{m}$ 的水（密度 $\rho = 1000\ \text{kg/m}^3$）。求：</p>
+        <ol>
+            <li>底面所受总压力</li>
+            <li>侧面所受总压力</li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+\textcolor{#11cc98}{\text{等效重力}} &\quad g' = g + a = 9.8 + 2 = 11.8\ \text{m/s}^2 \\
+\textcolor{#11cc98}{\text{周期公式}} &\quad T = 2\pi\sqrt{\frac{L}{g'}} = 2\pi\sqrt{\frac{1}{11.8}} \approx 1.84\ \text{s}
+\end{aligned}
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题4解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS2.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题4：多普勒效应综合题</h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：警车以 $30\ \text{m/s}$ 驶向静止观察者，鸣笛频率 $800\ \text{Hz}$ ，声速 $340\ \text{m/s}$ 。求：</p>
+        <ol>
+            <li>观察者接收频率</li>
+            <li>反射波频率</li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+f' &= \frac{v}{v - v_s}f_0 = \frac{340}{340-30} \times 800 \approx 877.4\ \text{Hz} \\
+f'' &= \frac{v + v_o}{v}f' = \frac{340+30}{340} \times 877.4 \approx 955.6\ \text{Hz}
+\end{aligned}
+    </div>
+</body>
+</html>

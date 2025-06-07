@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题2解答</title>
+    <!-- MathJax 配置 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['xcolor']},
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 样式优化 -->
+    <link rel="stylesheet" href="taskstyle.css">
+</head>
+<body>
+    <a href="QS3.html" class="nav-link"><span>返回题库首页</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>习题2：长度收缩</h1>
+    <div class="question-box">
+        <p><strong>题目</strong>：一根静止长度为 $L_0 = 10\ \text{m}$ 的火箭以 $v = 0.6c$ 的速度飞过地面上的观察者。求： </p>
+        <ol>
+            <li>观察者测得的火箭长度 $L$ </li>
+            <li>若观察者测得火箭长度为 $5\ \text{m}$，火箭的速度是多少？ </li>
+        </ol>
+    </div>
+    
+    <div class="answer-box">
+        <p><strong>解答</strong>：</p>
+\begin{aligned}
+\textcolor{#11cc98}{\text{长度收缩公式}} &\quad L = L_0 \sqrt{1 - v^2/c^2} \\
+\textcolor{#11cc98}{\text{1.}} \quad L &= 10 \times \sqrt{1 - (0.6)^2} = 10 \times 0.8 = 8\ \text{m} \\
+\textcolor{#11cc98}{\text{2.}} \quad 5 &= 10 \times \sqrt{1 - v^2/c^2} \implies \sqrt{1 - v^2/c^2} = 0.5 \\
+&\implies 1 - v^2/c^2 = 0.25 \implies v^2/c^2 = 0.75 \\
+&\implies v = c \sqrt{0.75} \approx 0.866c
+\end{aligned}
+    </div>
+</body>
+</html>
