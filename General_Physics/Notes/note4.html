@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>普通物理学 General Physics - Part 4: 热力学</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid #11cc98;
+            padding-bottom: 0.3em;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            color: #11cc98;
+            border-bottom: 3px solid #11cc98;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        h4 {
+            font-size: 1.3rem;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .toc {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .toc h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .content-section {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .example {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .example-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .formula {
+            background-color: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        
+        .warning {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #11cc98;
+            color: white;
+            border-radius: 6px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0fa67a;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .content-section {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* 新增样式以更好地适应原始内容 */
+        .content-section ul, .content-section ol {
+            background-color: #f8f8f8;
+            padding: 15px 20px 15px 40px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .content-section li {
+            margin-bottom: 12px;
+        }
+        
+        .content-section p {
+            margin: 10px 0;
+            line-height: 1.7;
+        }
+        
+        .content-section table {
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        .content-section h3 {
+            margin-top: 25px;
+        }
+        
+        .content-section h4 {
+            margin-top: 20px;
+        }
+    </style>
+    <!-- 引入MathJax进行公式渲染 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <!-- 目录 -->
+    <h1><a id="热力学"></a>Part 4: 热力学</h1>
+    <div class="nav-buttons">
+        <a href="./graph/graph4.html" class="nav-button">&larr; 查看知识图谱</a>
+        <a href="../Tasks/QS4.html" class="nav-button">查看习题集 &rarr;</a>
+    </div>
+    <div class="toc">
+        <h2>目录</h2>
+        <ul>
+            <li><a href="#热力学">Part 4: 热力学</a></li>
+            <ul>
+                <li><a href="#热力学基本概念">一、热力学基本概念</a></li>
+                <li><a href="#热力学第一定律能量守恒">二、热力学第一定律（能量守恒）</a></li>
+                <li><a href="#热力学第二定律熵与方向性">三、热力学第二定律（熵与方向性）</a></li>
+                <li><a href="#热机与制冷机">四、热机与制冷机</a></li>
+                <li><a href="#气体动理论">五、气体动理论</a></li>
+                <li><a href="#第三定律与其他">六、第三定律与其他</a></li>
+                <li><a href="#关键公式总结">七、关键公式总结</a></li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="../index.html" class="nav-button">&larr; 返回首页</a>
+        <a href="#关键公式总结" class="nav-button">查看关键公式 &rarr;</a>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="热力学基本概念"></a>一、热力学基本概念</h2>
+        <h3>温度与热平衡</h3>
+        <p>温度：衡量系统能量传递趋势的物理量，通过温度计测量（如汞温度计、电阻温度计）。</p>
+        <p>热平衡：两系统通过热传递达到相同温度，满足第零定律：若 A 与 C、B 与 C 热平衡，则 A 与 B 热平衡。</p>
+        <h3>系统分类</h3>
+        <ul>
+            <li>孤立系统：与外界无能量、物质交换。</li>
+            <li>封闭系统：仅交换能量。</li>
+            <li>开放系统：交换能量和物质。</li>
+        </ul>
+        <h3>温标</h3>
+        <ul>
+            <li>开尔文（K）：绝对温标，0 K 为绝对零度（不可通过有限步骤达到，第三定律）。</li>
+            <li>摄氏度（℃）：公式待补充。</li>
+            <li>华氏度（℉）：公式待补充。</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="热力学第一定律能量守恒"></a>二、热力学第一定律（能量守恒）</h2>
+        <h3>表达式</h3>
+        <div class="formula">
+            \(\Delta U = Q - W\)
+        </div>
+        <p>\(\Delta U\)：系统内能变化。</p>
+        <p>\(Q\)：吸收的热量（正）或释放的热量（负）。</p>
+        <p>\(W\)：系统对外做功（正）或外界对系统做功（负）。</p>
+        <h3>应用场景</h3>
+        <ul>
+            <li>等容过程：\(W = 0\)，\(Q = \Delta U\)。</li>
+            <li>等压过程：\(W = P\Delta V\)，\(Q = \Delta U + P\Delta V\)。</li>
+            <li>绝热过程：\(Q = 0\)，\(\Delta U = -W\)。</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="热力学第二定律熵与方向性"></a>三、热力学第二定律（熵与方向性）</h2>
+        <h3>克劳修斯表述</h3>
+        <p>热量不能自发从低温传向高温而不引起其他变化。</p>
+        <h3>开尔文 - 普朗克表述</h3>
+        <p>无法制造效率为 100% 的热机（即不可能从单一热源吸热全转为功）。</p>
+        <h3>熵（Entropy, \(S\)）</h3>
+        <h4>定义</h4>
+        <div class="formula">
+            \(dS = \frac{\delta Q_{\text{可逆}}}{T}\)
+        </div>
+        <p>是状态函数，衡量系统无序度。</p>
+        <h4>统计意义</h4>
+        <div class="formula">
+            \(S = k_B \ln W\)（\(W\)为微观态数，玻尔兹曼公式）
+        </div>
+        <h4>孤立系统熵增原理</h4>
+        <p>自发过程中，\(\Delta S_{\text{孤立}} \geq 0\)（可逆过程取等号，不可逆过程熵增加）。</p>
+        <h3>典型熵变计算</h3>
+        <ul>
+            <li>理想气体自由膨胀：\(\Delta S = nR\ln\frac{V_f}{V_i}\)。</li>
+            <li>热传导 / 混合过程：\(\Delta S = mc\ln\frac{T_{\text{终}}}{T_{\text{初}}}\)（积分求和）。</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="热机与制冷机"></a>四、热机与制冷机</h2>
+        <h3>卡诺循环（可逆热机）</h3>
+        <h4>四过程</h4>
+        <p>等温膨胀、绝热膨胀、等温压缩、绝热压缩。</p>
+        <h4>效率</h4>
+        <div class="formula">
+            \(\eta_{\text{卡诺}} = 1 - \frac{T_L}{T_H}\)（仅取决于高低温热源温度）
+        </div>
+        <h4>制冷系数（COP）</h4>
+        <ul>
+            <li>制冷模式：\(\text{COP}_{\text{制冷}} = \frac{T_L}{T_H - T_L}\)。</li>
+            <li>制热模式：\(\text{COP}_{\text{制热}} = \frac{T_H}{T_H - T_L}\)。</li>
+        </ul>
+        <h3>实际热机</h3>
+        <ul>
+            <li>奥托循环（汽油机）：效率取决于压缩比，\(\eta = 1 - \frac{1}{(V_1/V_2)^{\gamma - 1}}\)。</li>
+            <li>狄塞尔循环（柴油机）：基于等压燃烧过程，效率低于卡诺循环。</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="气体动理论"></a>五、气体动理论</h2>
+        <h3>理想气体假设</h3>
+        <p>分子间作用力可忽略，碰撞为弹性碰撞。</p>
+        <h3>状态方程</h3>
+        <div class="formula">
+            \(PV = nRT = Nk_BT\)（\(k_B\)为玻尔兹曼常数）
+        </div>
+        <h3>分子动能与速度</h3>
+        <h4>平均动能</h4>
+        <div class="formula">
+            \(\langle E_k \rangle = \frac{3}{2}k_BT\)（单原子气体）
+        </div>
+        <h4>方均根速度</h4>
+        <div class="formula">
+            \(v_{\text{rms}} = \sqrt{\frac{3RT}{M}}\)（\(M\)为摩尔质量）
+        </div>
+        <h4>麦克斯韦速度分布</h4>
+        <div class="formula">
+            \(f(v) = 4\pi\left(\frac{m}{2\pi k_BT}\right)^{3/2} v^2 e^{-mv^2/(2k_BT)}\)
+        </div>
+        <p>描述分子速度分布概率。</p>
+        <h3>自由度与比热容</h3>
+        <ul>
+            <li>单原子气体：自由度\(f = 3\)，\(C_V = \frac{3}{2}R\)。</li>
+            <li>双原子气体：自由度\(f = 5\)（含转动），\(C_V = \frac{5}{2}R\)。</li>
+        </ul>
+        <div class="formula">
+            \(C_P = C_V + R\)，比热容比\(\gamma = \frac{C_P}{C_V}\)
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="第三定律与其他"></a>六、第三定律与其他</h2>
+        <h3>第三定律</h3>
+        <p>无法通过有限步骤使系统温度降至绝对零度（\(T = 0\)）。</p>
+        <h3>实际气体修正</h3>
+        <div class="formula">
+            \(\left(P + \frac{aN^2}{V^2}\right)(V - Nb) = Nk_BT\)
+        </div>
+        <p>引入分子体积（\(b\)）和引力（\(a\)）修正。</p>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="关键公式总结"></a>七、关键公式总结</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>概念</th>
+                    <th>公式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>理想气体状态方程</td>
+                    <td>\(PV = nRT\)</td>
+                </tr>
+                <tr>
+                    <td>卡诺效率</td>
+                    <td>\(\eta = 1 - \frac{T_L}{T_H}\)</td>
+                </tr>
+                <tr>
+                    <td>熵变（可逆过程）</td>
+                    <td>\(\Delta S = \int\frac{\delta Q}{T}\)</td>
+                </tr>
+                <tr>
+                    <td>玻尔兹曼熵公式</td>
+                    <td>\(S = k_B \ln W\)</td>
+                </tr>
+                <tr>
+                    <td>方均根速度</td>
+                    <td>\(v_{\text{rms}} = \sqrt{\frac{3RT}{M}}\)</td>
+                </tr>
+                <tr>
+                    <td>摩尔定容热容</td>
+                    <td>\(C_V = \frac{f}{2}R\)（\(f\)为自由度）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <a href="#热力学" class="back-to-top">↑</a>
+    
+    <div class="nav-buttons">
+        <a href="note3.html#相对论" class="nav-button">&larr; 返回相对论部分</a>
+        <a href="#热力学" class="nav-button">返回顶部 &uarr;</a>
+    </div>
+    
+    <script>
+        // 当页面滚动时显示/隐藏返回顶部按钮
+        window.onscroll = function() {
+            var backButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backButton.style.display = "block";
+            } else {
+                backButton.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>

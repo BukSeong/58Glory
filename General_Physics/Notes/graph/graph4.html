@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Part 4 热力学知识图谱</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #11cc98;
+            margin: 10px auto 0;
+        }
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            background-color: #11cc98;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(17, 204, 152, 0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .nav-link:hover {
+            background-color: #0eb284;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(17, 204, 152, 0.3);
+        }
+        
+        .nav-link i {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-link:hover i {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../note4.html" class="nav-link"><span>返回Note 4</span>        <i class="fa fa-arrow-left"></i></a>
+    <h1>Part 4 热力学知识图谱</h1>
+    <!-- 流程图 -->
+    <div class="mermaid">
+        graph LR
+    classDef concept fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px;
+    classDef law fill:#FFF6CC,stroke:#FFBC52,stroke-width:2px;
+    classDef formula fill:#FFEBEB,stroke:#E68994,stroke-width:2px;
+    classDef process fill:#EBFFEB,stroke:#77DD77,stroke-width:2px;
+    
+    A(热力学):::concept --> B[基本概念]:::concept
+    A --> C[热力学定律]:::law
+    A --> D[热机与制冷机]:::concept
+    A --> E[气体动理论]:::concept
+    A --> F[实际应用]:::concept
+    
+    B --> B1(温度与热平衡):::concept
+    B --> B2(系统分类):::concept
+    B --> B3(温标):::concept
+    B1 --> B1a(第零定律):::law
+    B2 --> B2a(孤立系统):::concept
+    B2 --> B2b(封闭系统):::concept
+    B2 --> B2c(开放系统):::concept
+    B3 --> B3a(开尔文K):::concept
+    B3 --> B3b(摄氏度℃):::concept
+    B3 --> B3c(华氏度℉):::concept
+    
+    C --> C1(第一定律: ΔU=Q-W):::law
+    C1 --> C1a(等容过程):::process
+    C1 --> C1b(等压过程):::process
+    C1 --> C1c(绝热过程):::process
+    C --> C2(第二定律):::law
+    C2 --> C2a(克劳修斯表述):::law
+    C2 --> C2b(开尔文表述):::law
+    C2 --> C2c(熵增原理):::law
+    C2c --> C2d(dS=δQ/T):::formula
+    C2c --> C2e(S=k_B lnW):::formula
+    C --> C3(第三定律):::law
+    C3 --> C3a(绝对零度不可达):::concept
+    
+    D --> D1(卡诺循环):::process
+    D1 --> D1a(等温膨胀):::process
+    D1 --> D1b(绝热膨胀):::process
+    D1 --> D1c(等温压缩):::process
+    D1 --> D1d(绝热压缩):::process
+    D1 --> D2(η=1-T_L/T_H):::formula
+    D2 --> D3(制冷系数):::formula
+    D2 --> D4(制热系数):::formula
+    D --> D5(实际热机):::concept
+    D5 --> D5a(奥托循环):::process
+    D5 --> D5b(狄塞尔循环):::process
+    
+    E --> E1(理想气体假设):::concept
+    E1 --> E2(PV=nRT):::formula
+    E2 --> E3(分子动能):::concept
+    E3 --> E3a(3/2k_BT):::formula
+    E2 --> E4(方均根速度):::concept
+    E4 --> E4a(√3RT/M):::formula
+    E2 --> E5(麦克斯韦分布):::concept
+    E --> E6(热容理论):::concept
+    E6 --> E6a(单原子气体):::concept
+    E6 --> E6b(双原子气体):::concept
+    E6a --> E7a(C_V=3/2R):::formula
+    E6b --> E7b(C_V=5/2R):::formula
+    E7a --> E8(γ=C_P/C_V):::formula
+    E7b --> E8
+    
+    F --> F1(热传导应用):::concept
+    F --> F2(材料热力学):::concept
+    F --> F3(气象学应用):::concept
+    
+    %% 交叉连接
+    C1 -.-> D1(支持卡诺循环分析):::process
+    C2 -.-> D2(限制热机效率):::formula
+    E2 -.-> C1(状态方程用于过程计算):::formula
+    D1 -.-> F1(应用于制冷系统):::concept
+    </div>
+</body>
+
+</html>

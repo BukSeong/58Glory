@@ -241,6 +241,16 @@
                 <li><a href="#简谐振动">简谐振动</a></li>
                 <li><a href="#波动方程">波动方程</a></li>
             </ul>
+            <li><a href="#相对论">相对论</a></li>
+            <ul>
+                <li><a href="#狭义相对论">狭义相对论</a></li>
+            </ul>
+            <li><a href="#热力学">热力学</a></li>
+            <ul>
+                <li><a href="#热力学第零定律">热力学第零定律</a></li>
+                <li><a href="#热力学第一定律">热力学第一定律</a></li>
+                <li><a href="#热力学第二定律">热力学第二定律</a></li>
+            </ul>
         </ul>
     </div>
 
@@ -335,6 +345,59 @@
     </div>
 
     <div class="content-section">
+        <h2><a id="相对论"></a>相对论</h2>
+        <h3><a id="狭义相对论"></a>狭义相对论</h3>
+        <div class="formula">
+            <div class="formula-title">时间膨胀</div>
+            \[\Delta t = \frac{\Delta t_0}{\sqrt{1 - \frac{v^2}{c^2}}}\]
+            <p>其中 \(\Delta t_0\) 是固有时间，\(v\) 是相对速度，\(c\) 是真空中的光速。</p>
+        </div>
+        <div class="formula">
+            <div class="formula-title">长度收缩</div>
+            \[L = L_0\sqrt{1 - \frac{v^2}{c^2}}\]
+            <p>其中 \(L_0\) 是固有长度。</p>
+        </div>
+        <div class="formula">
+            <div class="formula-title">质能关系</div>
+            \[E = mc^2\]
+            <p>其中 \(m\) 是物体的质量，\(E\) 是物体的能量。</p>
+        </div>
+        <div class="formula">
+            <div class="formula-title">相对论动量</div>
+            \[p = \frac{mv}{\sqrt{1 - \frac{v^2}{c^2}}}\]
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2><a id="热力学"></a>热力学</h2>
+        <h3><a id="热力学第零定律"></a>热力学第零定律</h3>
+        <div class="formula">
+            <div class="formula-title">热平衡</div>
+            <p>如果两个热力学系统中的每一个都与第三个热力学系统处于热平衡(温度相同)，则它们彼此也必定处于热平衡。</p>
+        </div>
+        <h3><a id="热力学第一定律"></a>热力学第一定律</h3>
+        <div class="formula">
+            <div class="formula-title">能量守恒</div>
+            \[\Delta U = Q - W\]
+            <p>其中 \(\Delta U\) 是系统内能的变化，\(Q\) 是系统吸收的热量，\(W\) 是系统对外界做的功。</p>
+        </div>
+        <h3><a id="热力学第二定律"></a>热力学第二定律</h3>
+        <div class="formula">
+            <div class="formula-title">克劳修斯表述</div>
+            <p>热量不能自发地从低温物体转移到高温物体。</p>
+        </div>
+        <div class="formula">
+            <div class="formula-title">开尔文 - 普朗克表述</div>
+            <p>不可能从单一热源吸取热量，并将这热量完全变为功，而不产生其他影响。</p>
+        </div>
+        <div class="formula">
+            <div class="formula-title">熵增原理</div>
+            \[\Delta S \geq 0\]
+            <p>对于孤立系统，熵永不减少。</p>
+        </div>
+    </div>
+
+    <div class="content-section">
         
         <div class="symbol-note">
             <p><strong>注</strong>：公式中符号遵循国际单位制（SI），如 \(v\) 为速度（m/s）， \(m\) 为质量（kg）， \(k\) 为劲度系数（N/m）。</p>
@@ -348,7 +411,7 @@
         <a href="../index.html" class="nav-button">&larr; 返回首页</a>
         <a href="#TOP" class="nav-button">返回顶部 &uarr;</a>
     </div>
-        <script>
+    <script>
         // 当页面滚动时显示/隐藏返回顶部按钮
         window.onscroll = function() {
             var backButton = document.querySelector('.back-to-top');
